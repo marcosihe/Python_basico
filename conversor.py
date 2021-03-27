@@ -1,3 +1,15 @@
+# Es importante tener declarada o definida la función antes de ejecutarla
+# Es decir, se define y se usa en las líneas siguientes (no arriba)
+
+def conversor(exchange_rate, dollar_value):
+    pesos = input('Cuántos pesos ' + exchange_rate + ' tienes?: ')
+    pesos = float(pesos)
+    dollar = pesos / dollar_value
+    dollar = round(dollar, 2)
+    dollar = str(dollar)
+    print('Tienes $' + dollar + ' dólares')
+
+
 menu = """
 Bienvenido al conversor de moneda
 
@@ -10,28 +22,10 @@ Elige una opción: """
 option = int(input(menu))
 
 if option == 1:
-    pesos = input('Cuántos tienes?: ')
-    pesos = float(pesos)
-    valor_dolar = 3875
-    equivalente_en_dolares = pesos / valor_dolar
-    equivalente_en_dolares = round(equivalente_en_dolares, 2)
-    equivalente_en_dolares = str(equivalente_en_dolares)
-    print('Tienes $' + equivalente_en_dolares + ' dólares')
+    conversor('Colombianos', 3875)
 elif option == 2:
-    pesos = input('Cuántos tienes?: ')
-    pesos = float(pesos)
-    valor_dolar = 50.55
-    equivalente_en_dolares = pesos / valor_dolar
-    equivalente_en_dolares = round(equivalente_en_dolares, 2)
-    equivalente_en_dolares = str(equivalente_en_dolares)
-    print('Tienes $' + equivalente_en_dolares + ' dólares')
+    conversor('Argentinos', 79.5)
 elif option == 3:
-    pesos = input('Cuántos tienes?: ')
-    pesos = float(pesos)
-    valor_dolar = 21.14
-    equivalente_en_dolares = pesos / valor_dolar
-    equivalente_en_dolares = round(equivalente_en_dolares, 2)
-    equivalente_en_dolares = str(equivalente_en_dolares)
-    print('Tienes $' + equivalente_en_dolares + ' dólares')
+    conversor('Mexicanos', 45.14)
 else:
     print("Ejecute de nuevo el programa y elija una opción válida.")
