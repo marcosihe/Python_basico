@@ -10,19 +10,24 @@ def imprimir_mensaje(option):
     print('Adios')
 
 
-imprimir_mensaje1()
-imprimir_mensaje1()
-imprimir_mensaje1()
-print('Bienvenido al programa para elegir opciones: ')
+def run():
+    imprimir_mensaje1()
+    imprimir_mensaje1()
+    imprimir_mensaje1()
+    print('Bienvenido al programa para elegir opciones: ')
 
-# Uso de parámetros
-option = int(input('Elige una opción: 1, 2 o 3: '))
-if option == 1:
-    imprimir_mensaje(1)
-elif option == 2:
-    imprimir_mensaje(2)
-elif option == 3:
-    imprimir_mensaje(3)
-else:
-    print('Debes elegir una opción válida')
-    print('***Fin del programa***')
+    # Uso de parámetros
+    option = int(input('Elige una opción: 1, 2 o 3: '))
+    if option == 1:
+        imprimir_mensaje(1)
+    elif option == 2:
+        imprimir_mensaje(2)
+    elif option == 3:
+        imprimir_mensaje(3)
+    else:
+        print('Debes elegir una opción válida')
+        print('***Fin del programa***')
+
+
+if __name__ == '__main__':
+    run()

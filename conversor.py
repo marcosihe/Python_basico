@@ -10,22 +10,27 @@ def conversor(exchange_rate, dollar_value):
     print('Tienes $' + dollar + ' dólares')
 
 
-menu = """
-Bienvenido al conversor de moneda
+def run():
+    menu = """
+    Bienvenido al conversor de moneda
 
-1. Peso colombiano
-2. Peso argentino
-3. Peso mexicano
+    1. Peso colombiano
+    2. Peso argentino
+    3. Peso mexicano
 
-Elige una opción: """
+    Elige una opción: """
 
-option = int(input(menu))
+    option = int(input(menu))
 
-if option == 1:
-    conversor('Colombianos', 3875)
-elif option == 2:
-    conversor('Argentinos', 79.5)
-elif option == 3:
-    conversor('Mexicanos', 45.14)
-else:
-    print("Ejecute de nuevo el programa y elija una opción válida.")
+    if option == 1:
+        conversor('Colombianos', 3875)
+    elif option == 2:
+        conversor('Argentinos', 79.5)
+    elif option == 3:
+        conversor('Mexicanos', 45.14)
+    else:
+        print("Ejecute de nuevo el programa y elija una opción válida.")
+
+
+if __name__ == '__main__':
+    run()

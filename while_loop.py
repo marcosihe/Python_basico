@@ -6,7 +6,7 @@ def run():
     power_2 = 2**counter
     while power_2 < LIMITE:
         print('2 elevado a ' + str(counter) + ' es igual a: ' + str(power_2))
-        counter = counter + 1
+        counter += 1
         power_2 = 2**counter
 
 
